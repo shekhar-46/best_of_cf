@@ -1,0 +1,51 @@
+QUESTION LINK --> https://codeforces.com/contest/2004/problem/B
+
+CODE -->
+
+#include <bits/stdc++.h>
+// #define int long long
+#define ld long double
+#define pb push_back
+#define all(x) x.begin(),x.end()
+#define yes cout << "YES" << endl
+#define no cout << "NO" << endl
+#define mod 1000000007
+const int N = 1e5 + 10;
+using namespace std;
+
+
+
+void shekhar_46()
+{
+   int l,r;
+   cin >> l >> r;
+   int L,R;
+   cin >> L >> R;
+
+   int low = max(l , L);
+   int high = min(r , R);
+   if(low <= high)
+   {
+      int ans = high - low;
+      if(low != l || low != L) ans++;
+      if(high != r || high != R) ans++;
+
+      cout << ans << endl;
+   }
+   else
+      cout << "1\n";
+}
+
+
+int32_t main()
+{
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);
+   int T;
+   cin >> T;
+   while(T--)
+   {
+      shekhar_46();
+   }
+   return 0;
+}
