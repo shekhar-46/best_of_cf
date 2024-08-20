@@ -1,0 +1,74 @@
+https://codeforces.com/problemset/problem/1915/E
+
+
+This Question will blow your mind 
+After solving you will be on another level
+give it a one shot.
+First Give A Try
+Then look to solutions....
+Happy Coding <_>:)
+
+
+
+
+
+
+
+
+
+
+
+
+CODE --->
+#include <bits/stdc++.h>
+#define ll long long
+#define ld long double
+#define pb push_back
+#define yes cout << "YES" << endl
+#define no cout << "NO" << endl
+#define mod 1000000007
+using namespace std;
+const int N = 1e5 + 10;
+ 
+int main()
+{
+   #ifndef ONLINE_JUDGE
+      freopen("input.txt", "r", stdin);
+      freopen("output.txt", "w", stdout);
+   #endif
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);
+   
+   int T;
+   cin >> T;
+   while(T--)
+   {
+      int n;
+      cin >> n;
+      vector<int>v(n);
+      for(int i = 0; i < n; i++)
+      {
+         cin >> v[i];
+         if(i & 1)
+            v[i] = -v[i];
+      }
+      set<ll>st;
+      st.insert(0);
+      ll sum = 0,found = false;
+      for(int i = 0; i < n; i++)
+      {
+         sum += v[i];
+         if(st.find(sum) != st.end())
+         {
+            found = true;
+            break;
+         }
+         else
+         {
+            st.insert(sum);
+            continue;
+         }
+      }
+      cout << (found ? "YES" : "NO") << endl;
+   }
+}
